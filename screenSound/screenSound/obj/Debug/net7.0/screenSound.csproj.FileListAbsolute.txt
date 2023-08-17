@@ -1,0 +1,15 @@
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\bin\Debug\net7.0\screenSound.exe
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\bin\Debug\net7.0\screenSound.deps.json
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\bin\Debug\net7.0\screenSound.runtimeconfig.json
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\bin\Debug\net7.0\screenSound.dll
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\bin\Debug\net7.0\screenSound.pdb
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\obj\Debug\net7.0\screenSound.csproj.AssemblyReference.cache
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\obj\Debug\net7.0\screenSound.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\obj\Debug\net7.0\screenSound.AssemblyInfoInputs.cache
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\obj\Debug\net7.0\screenSound.AssemblyInfo.cs
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\obj\Debug\net7.0\screenSound.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\obj\Debug\net7.0\screenSound.dll
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\obj\Debug\net7.0\refint\screenSound.dll
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\obj\Debug\net7.0\screenSound.pdb
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\obj\Debug\net7.0\screenSound.genruntimeconfig.cache
+C:\Users\gabri\Desktop\Alura\C#\primeiroProjetoCs\screenSound\screenSound\obj\Debug\net7.0\ref\screenSound.dll
