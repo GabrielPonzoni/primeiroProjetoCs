@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeiroProjetoC#", "PrimeiroProjetoC#\PrimeiroProjetoC#.csproj", "{D0CA2B4B-2D4D-4007-B095-FC493D57783C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "screenSound", "screenSound\screenSound.csproj", "{E33BF6EC-5442-4D00-BF07-E199CA6BD266}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D0CA2B4B-2D4D-4007-B095-FC493D57783C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0CA2B4B-2D4D-4007-B095-FC493D57783C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0CA2B4B-2D4D-4007-B095-FC493D57783C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0CA2B4B-2D4D-4007-B095-FC493D57783C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E33BF6EC-5442-4D00-BF07-E199CA6BD266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33BF6EC-5442-4D00-BF07-E199CA6BD266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33BF6EC-5442-4D00-BF07-E199CA6BD266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33BF6EC-5442-4D00-BF07-E199CA6BD266}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5998CA6A-8378-41FF-B7B4-ABB6390FFBEB}
+		SolutionGuid = {76A83299-D9D9-467B-9199-D84A7B4BB654}
 	EndGlobalSection
 EndGlobal

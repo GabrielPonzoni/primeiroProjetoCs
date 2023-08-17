@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\Desktop\\Alura\\C#\\PrimeiroProjetoC#\\PrimeiroProjetoC#\\PrimeiroProjetoC#.csproj": {}
+    "C:\\Users\\gabri\\Desktop\\Alura\\C#\\primeiroProjetoCs\\screenSound\\screenSound\\screenSound.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\Desktop\\Alura\\C#\\PrimeiroProjetoC#\\PrimeiroProjetoC#\\PrimeiroProjetoC#.csproj": {
+    "C:\\Users\\gabri\\Desktop\\Alura\\C#\\primeiroProjetoCs\\screenSound\\screenSound\\screenSound.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Desktop\\Alura\\C#\\PrimeiroProjetoC#\\PrimeiroProjetoC#\\PrimeiroProjetoC#.csproj",
-        "projectName": "PrimeiroProjetoC#",
-        "projectPath": "C:\\Users\\gabri\\Desktop\\Alura\\C#\\PrimeiroProjetoC#\\PrimeiroProjetoC#\\PrimeiroProjetoC#.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Desktop\\Alura\\C#\\primeiroProjetoCs\\screenSound\\screenSound\\screenSound.csproj",
+        "projectName": "screenSound",
+        "projectPath": "C:\\Users\\gabri\\Desktop\\Alura\\C#\\primeiroProjetoCs\\screenSound\\screenSound\\screenSound.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Desktop\\Alura\\C#\\PrimeiroProjetoC#\\PrimeiroProjetoC#\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\Desktop\\Alura\\C#\\primeiroProjetoCs\\screenSound\\screenSound\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
