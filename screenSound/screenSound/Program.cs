@@ -2,7 +2,7 @@
 string mensagemBoasVindas = "Bem-Vindo ao Screen Sound por Gabriel Ponzoni!";
 /*Console.WriteLine(mensagemBoasVindas); //Q1: Ñ se usa print? Porque WriteLine(python se usa esse comando em leitura de arquivo?*/
 
-void ExibirMensagemDeBoasVindas()
+void ExibirLogo()
 {
     // Cabecalho do código;
     Console.WriteLine(@"
@@ -19,6 +19,8 @@ void ExibirMensagemDeBoasVindas()
 
 void ExibirOpcoesDoMenu()
 {
+    ExibirLogo();
+
     Console.WriteLine("\nDigite 1 para registrar uma banda;");
     Console.WriteLine("Digite 2 para mostrar todas as bandas;");
     Console.WriteLine("Digite 3 para avaliar uma banda;");
@@ -30,7 +32,7 @@ void ExibirOpcoesDoMenu()
     int opcaoEscolhidaInt = int.Parse(opcaoEscolhida);
     switch (opcaoEscolhidaInt) 
     {
-        case 1: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaInt);
+        case 1: RegistrarBandas();
             break;
         case 2: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaInt);
             break;
@@ -46,5 +48,16 @@ void ExibirOpcoesDoMenu()
 
 }
 
-ExibirMensagemDeBoasVindas();
+void RegistrarBandas()
+{
+    Console.Clear(); // Limpa tela
+    Console.WriteLine("Registro de Bandas");
+    Console.Write("Informe o nome de uma banda: ");
+    string nomeDaBanda = Console.ReadLine()!;
+    Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso! ");
+    Thread.Sleep(2000); // Função de pausar o tempo da thread no terminal
+    Console.Clear();
+    ExibirOpcoesDoMenu();
+}
+
 ExibirOpcoesDoMenu();
