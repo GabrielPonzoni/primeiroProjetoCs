@@ -1,6 +1,6 @@
 ﻿// Screen Sound
 string mensagemBoasVindas = "Bem-Vindo ao Screen Sound por Gabriel Ponzoni!";
-/*Console.WriteLine(mensagemBoasVindas); //Q1: Ñ se usa print? Porque WriteLine(python se usa esse comando em leitura de arquivo?*/
+List<string> listaDeBandas = new List<string> {"U2","The Beatles","Calypso"};
 
 void ExibirLogo()
 {
@@ -34,7 +34,7 @@ void ExibirOpcoesDoMenu()
     {
         case 1: RegistrarBandas();
             break;
-        case 2: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaInt);
+        case 2: MostrarListaBandas();
             break;
         case 3: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaInt);
             break;
@@ -51,11 +51,37 @@ void ExibirOpcoesDoMenu()
 void RegistrarBandas()
 {
     Console.Clear(); // Limpa tela
+    Console.WriteLine("******************");
     Console.WriteLine("Registro de Bandas");
+    Console.WriteLine("******************\n");
     Console.Write("Informe o nome de uma banda: ");
     string nomeDaBanda = Console.ReadLine()!;
-    Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso! ");
-    Thread.Sleep(2000); // Função de pausar o tempo da thread no terminal
+    listaDeBandas.Add(nomeDaBanda);
+    Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso! "); // Em python o $ é o equivalente a f-string; 
+    Thread.Sleep(2000); // Função de pausar o tempo da thread no terminal;
+    Console.Clear();
+    ExibirOpcoesDoMenu();   
+}
+
+void MostrarListaBandas()
+{
+    Console.Clear();
+    Console.WriteLine("******************************");
+    Console.WriteLine("Bandas registradas no sistema:");
+    Console.WriteLine("******************************\n");
+    /*    for (int i = 0; i < listaDeBandas.Count; i++) // Count é como se fosse a função length do python;
+        {
+            Console.WriteLine($"{i+1}ª Banda: {listaDeBandas[i]}");
+        } ou ~~      */
+    int i = 1;
+    foreach (string banda in listaDeBandas)
+    {
+        Console.WriteLine($"{i}ª Banda: {banda}");
+        i++;
+    }
+
+    Console.WriteLine("\nDigite uma tecla para voltar ao menu...");
+    Console.ReadKey();
     Console.Clear();
     ExibirOpcoesDoMenu();
 }
