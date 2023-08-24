@@ -51,14 +51,14 @@ void ExibirOpcoesDoMenu()
 void RegistrarBandas()
 {
     Console.Clear(); // Limpa tela
-    Console.WriteLine("******************");
-    Console.WriteLine("Registro de Bandas");
-    Console.WriteLine("******************\n");
+
+    ExibirTituloDaOpcao("Registro de Bandas");
     Console.Write("Informe o nome de uma banda: ");
     string nomeDaBanda = Console.ReadLine()!;
     listaDeBandas.Add(nomeDaBanda);
     Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso! "); // Em python o $ é o equivalente a f-string; 
     Thread.Sleep(2000); // Função de pausar o tempo da thread no terminal;
+
     Console.Clear();
     ExibirOpcoesDoMenu();   
 }
@@ -66,14 +66,15 @@ void RegistrarBandas()
 void MostrarListaBandas()
 {
     Console.Clear();
-    Console.WriteLine("******************************");
-    Console.WriteLine("Bandas registradas no sistema:");
-    Console.WriteLine("******************************\n");
+    ExibirTituloDaOpcao("Bandas registradas no sistema:");
+
     /*    for (int i = 0; i < listaDeBandas.Count; i++) // Count é como se fosse a função length do python;
         {
             Console.WriteLine($"{i+1}ª Banda: {listaDeBandas[i]}");
         } ou ~~      */
+
     int i = 1;
+
     foreach (string banda in listaDeBandas)
     {
         Console.WriteLine($"{i}ª Banda: {banda}");
@@ -84,6 +85,17 @@ void MostrarListaBandas()
     Console.ReadKey();
     Console.Clear();
     ExibirOpcoesDoMenu();
+}
+
+void ExibirTituloDaOpcao(string titulo)
+{
+    int quantidadeDeLetras = titulo.Length; // coleta as letras do vetor string inserido na função;
+    string asteriscos = string.Empty.PadLeft(quantidadeDeLetras, '*'); // cria uma string com base no valor de letras substituindo por asteriscos
+
+    // Cabecalho proprimente dito;
+    Console.WriteLine(asteriscos);
+    Console.WriteLine(titulo);
+    Console.WriteLine(asteriscos + "\n");
 }
 
 ExibirOpcoesDoMenu();
