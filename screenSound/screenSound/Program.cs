@@ -1,6 +1,10 @@
 ﻿// Screen Sound
 string mensagemBoasVindas = "Bem-Vindo ao Screen Sound por Gabriel Ponzoni!";
-List<string> listaDeBandas = new List<string> {"U2","The Beatles","Calypso"};
+//List<string> listaDeBandas = new List<string> {"U2","The Beatles","Calypso"};
+
+Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
+bandasRegistradas.Add("Link Park", new List<int> { 10, 8, 6});
+bandasRegistradas.Add("The Beatles", new List<int>());
 
 void ExibirLogo()
 {
@@ -55,7 +59,7 @@ void RegistrarBandas()
     ExibirTituloDaOpcao("Registro de Bandas");
     Console.Write("Informe o nome de uma banda: ");
     string nomeDaBanda = Console.ReadLine()!;
-    listaDeBandas.Add(nomeDaBanda);
+    bandasRegistradas.Add(nomeDaBanda, new List<int>());
     Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso! "); // Em python o $ é o equivalente a f-string; 
     Thread.Sleep(2000); // Função de pausar o tempo da thread no terminal;
 
@@ -75,7 +79,7 @@ void MostrarListaBandas()
 
     int i = 1;
 
-    foreach (string banda in listaDeBandas)
+    foreach (string banda in bandasRegistradas.Keys)
     {
         Console.WriteLine($"{i}ª Banda: {banda}");
         i++;
