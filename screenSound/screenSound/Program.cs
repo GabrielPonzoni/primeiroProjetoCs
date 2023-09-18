@@ -3,7 +3,7 @@ string mensagemBoasVindas = "Bem-Vindo ao Screen Sound por Gabriel Ponzoni!";
 //List<string> listaDeBandas = new List<string> {"U2","The Beatles","Calypso"};
 
 Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
-bandasRegistradas.Add("Link Park", new List<int> { 10, 8, 6});
+bandasRegistradas.Add("Linkin Park", new List<int> { 10, 8, 6});
 bandasRegistradas.Add("The Beatles", new List<int>());
 
 void ExibirLogo()
@@ -40,7 +40,7 @@ void ExibirOpcoesDoMenu()
             break;
         case 2: MostrarListaBandas();
             break;
-        case 3: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaInt);
+        case 3: AvaliarUmaBanda();
             break;
         case 4: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaInt);
             break;
@@ -100,6 +100,36 @@ void ExibirTituloDaOpcao(string titulo)
     Console.WriteLine(asteriscos);
     Console.WriteLine(titulo);
     Console.WriteLine(asteriscos + "\n");
+}
+
+void AvaliarUmaBanda()
+{
+    //digite qual banda deseja avaliar
+    // se a banda existir no dicionário >> Atribuir uma nota
+    // senão volta ao menu principal 
+
+    Console.Clear();
+    ExibirTituloDaOpcao("Avaliar bandas");
+    Console.Write("Digite o nome da banda que deseja avaliar: ");
+    string nomeDaBanda = Console.ReadLine()!; // exclamação serve para n aceitar valor nulo na opção
+    if (bandasRegistradas.ContainsKey(nomeDaBanda))
+    {
+        Console.Write($"\nQual que é a nota que a banda {nomeDaBanda} merece? ");
+        int nota = int.Parse(Console.ReadLine());
+        bandasRegistradas[nomeDaBanda].Add(nota); // as chaves serve para acessar a segunda parte do dicionário "Tvalue"
+        Console.WriteLine($"\nA nota {nota} foi registrada com sucesso na banda {nomeDaBanda}!");
+        Thread.Sleep(2000);
+        Console.Clear();
+        ExibirOpcoesDoMenu();
+    }else
+    {
+        Console.WriteLine($"\nA banda {nomeDaBanda} não foi registrada!");
+        Console.WriteLine("Digite qualquer tecla para voltar ao menu: ");
+        Console.ReadKey();
+        Console.Clear();
+        ExibirOpcoesDoMenu();
+    }
+
 }
 
 ExibirOpcoesDoMenu();
