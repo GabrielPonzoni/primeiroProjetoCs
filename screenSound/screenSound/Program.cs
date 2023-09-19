@@ -1,4 +1,7 @@
 ﻿// Screen Sound
+using System.Diagnostics.Metrics;
+using System.Drawing;
+
 string mensagemBoasVindas = "Bem-Vindo ao Screen Sound por Gabriel Ponzoni!";
 //List<string> listaDeBandas = new List<string> {"U2","The Beatles","Calypso"};
 
@@ -42,9 +45,11 @@ void ExibirOpcoesDoMenu()
             break;
         case 3: AvaliarUmaBanda();
             break;
-        case 4: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaInt);
+        case 4: MediaDaBanda();
             break;
-        case -1: Console.WriteLine("Tchau tchau :) ");
+        case -1: 
+            Console.WriteLine("Tchau tchau :) ");
+            Thread.Sleep(2000);
             break;
         default: Console.WriteLine("Informação inválida!");
             break;
@@ -124,12 +129,65 @@ void AvaliarUmaBanda()
     }else
     {
         Console.WriteLine($"\nA banda {nomeDaBanda} não foi registrada!");
-        Console.WriteLine("Digite qualquer tecla para voltar ao menu: ");
+        Console.WriteLine("\n>>> Digite qualquer tecla para voltar ao menu: ");
         Console.ReadKey();
         Console.Clear();
         ExibirOpcoesDoMenu();
     }
 
+}
+
+void MediaDaBanda()
+{
+    // Exibir o titulo; 
+    // Perguntar ao usuário qual a banda q ele deseja ver a nota; 
+    // Consutlar se de fato a banda está presente no banco de dados;
+    // Realizar o calculo e exibir o resultado;
+
+    Console.Clear();
+    ExibirTituloDaOpcao("Calculadora de Média das Bandas");
+    Console.Write("Qual a banda que você deseja ver a média? ");
+    string bandaEscolhida = Console.ReadLine()!;
+    if (bandasRegistradas.ContainsKey(bandaEscolhida))
+    {
+        List<int> notasDasBandas = bandasRegistradas[bandaEscolhida]; //pegar as notas da chave especificada 
+        Console.WriteLine($"\nAs notas da banda {bandaEscolhida} são:");
+        int count = 0;
+        foreach (int nota in notasDasBandas) 
+        {
+            count++;
+
+            if (count < notasDasBandas.Count)
+            {
+                Console.Write(nota + ", ");
+            }
+            else
+            {
+                if (notasDasBandas.Count > 1) //Se houver mais de um valor, isso imprime "e" seguido do último valor e um ponto final. Por exemplo, "10, 20, 30 e 40."
+                {
+                    Console.Write("e " + nota + ".");
+                }
+                else
+                {
+                    Console.Write(nota + "."); //Se houver apenas um valor na lista, isso imprime apenas o valor seguido de um ponto final. Por exemplo, "10."
+                }
+            }
+        }
+
+        Console.WriteLine($"\n\nSua média é de {notasDasBandas.Average()}.");
+        Console.WriteLine("\n>>> Digite qualquer tecla para voltar ao menu: ");
+        Console.ReadKey();
+        Console.Clear();
+        ExibirOpcoesDoMenu();
+    }
+    else
+    {
+        Console.WriteLine($"\nA banda {bandaEscolhida} não consta no banco de dados!");
+        Console.WriteLine("\n>>> Digite qualquer tecla para voltar ao menu: ");
+        Console.ReadKey();
+        Console.Clear();
+        ExibirOpcoesDoMenu();
+    }
 }
 
 ExibirOpcoesDoMenu();
